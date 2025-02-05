@@ -1,430 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind css</title>
     <!-- favicon link -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- google font link -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- ionicons cdn -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
     <!-- alpine js cdn -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- style css -->
     <style type="text/tailwindcss">
-        body{
-            font-family: 'Inter', sans-serif;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <!-- ====== header ====== -->
 
-<!-- ====== header ====== -->
+    <header
+      x-data="{navbarOpen: false}"
+      class="absolute sticky left-0 top-0 z-50 bg-white/90 w-full backdrop-blur"
+    >
+      <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
+        <div
+          class="relative flex h-full items-center justify-between border-b border-slate-500/10"
+        >
+          <!-- logo -->
+          <div class="w-[30rem] max-w-full text-blue-600 font-bold">
+            <a href="#"> IDOWUOLOWU & CO </a>
+          </div>
 
-
-<header x-data="{navbarOpen: false}" class="absolute sticky left-0 top-0 z-50 bg-white/90 w-full backdrop-blur">
-    <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
-        <div class="relative flex h-full items-center justify-between border-b border-slate-500/10">
-            <!-- logo -->
-            <div class="w-[30rem] max-w-full text-blue-600 font-bold ">
-                <a href="#">
-                    IDOWUOLOWU & CO
-
-                </a>
-            </div>
-
-            <!-- menu -->
-            <div class="flex w-full items-center justify-between">
-                <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse" class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-blue-200 bg-black py-5 px-6 shadow-lg shadow-blue-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg:py-0">
-                    <ul class="flex flex-col justify-center gap-8 lg:flex-row">
-                        <li>
-                            <a href="#home" class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base">Home</a>
-                        </li>
-                        <li>
-                            <a href="#offer" class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base">What we do</a>
-                        </li>
-                        <li>
-                            <a href="#about" class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base">About</a>
-                        </li>
-                        <li>
-                            <a href="#team" class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base">Team</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- menu btn -->
-            <div class="flex">
-                <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive'" id="navbarToggler" class="block lg:hidden">
-                    <ion-icon name="menu-outline" class="text-4xl text-blue-500"></ion-icon>
-                </button>
-            </div>
+          <!-- menu -->
+          <div class="flex w-full items-center justify-between">
+            <nav
+              x-transition
+              :class="!navbarOpen && 'hidden'"
+              id="navbarCollapse"
+              class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-blue-200 bg-black py-5 px-6 shadow-lg shadow-blue-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg:py-0"
+            >
+              <ul class="flex flex-col justify-center gap-8 lg:flex-row">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#offer"
+                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    >What we do</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#team"
+                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    >Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- menu btn -->
+          <div class="flex">
+            <button
+              @click="navbarOpen = !navbarOpen"
+              :class="navbarOpen && 'navbarTogglerActive'"
+              id="navbarToggler"
+              class="block lg:hidden"
+            >
+              <ion-icon
+                name="menu-outline"
+                class="text-4xl text-blue-500"
+              ></ion-icon>
+            </button>
+          </div>
         </div>
-    </div>
-</header>
-<!-- ====== END header ====== -->
+      </div>
+    </header>
+    <!-- ====== END header ====== -->
 
+    <!-- ====== hero ====== -->
 
-<!-- ====== hero ====== -->
-
-<section class="relative bg-white py-16 lg:pt-30px]" id="home">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <section class="relative bg-white py-16 lg:pt-30px]" id="home">
+      <div class="mx-auto max-w-7xl px-8 md:px-6">
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-5/12 lg:mt-[50px]">
-                <h1 class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[30px] lg:text-[40px] xl:text-[42px]">PROTEGE LAW FIRM <span class="text-blue-600">IDOWU OLOWU & CO</span></h1>
-                <p class="text-slate-900 mb-8 max-w-[480px] text-base"> Trust us to protect your rights, navigate complex legal challenges, and deliver results. Your success is our priority.
-                </p>
-                <a href="#offer" class=" btn w-full rounded-md bg-blue-700 px-8 py-2.5 font-semibold text-white shadow-md shadow-blue-500/20 hover:bg-blue-600 duration-200 sm:w-auto">Practice Area</a>
-            </div>
+          <div class="w-full lg:w-5/12 lg:mt-[50px] lg:ml-[70px]">
+            <h1
+              class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[30px] lg:text-[40px] xl:text-[42px]"
+            >
+              PROTEGE LAW FIRM
+              <span class="text-blue-600">IDOWU OLOWU & CO</span>
+            </h1>
+            <p class="text-slate-900 mb-8 max-w-[480px] text-base">
+              Trust us to protect your rights, navigate complex legal
+              challenges, and deliver results. Your success is our priority.
+            </p>
+            <a
+              href="#offer"
+              class="btn w-full rounded-md bg-blue-700 px-8 py-2.5 font-semibold text-white shadow-md shadow-blue-500/20 hover:bg-blue-600 duration-200 sm:w-auto"
+              >Practice Area</a
+            >
+          </div>
 
-            <div class="hidden px-4 lg:block lg:w-1/12"></div>
+          <div class="hidden px-4 lg:block lg:w-1/12"></div>
 
-            <div class="w-full px-4 lg:w-1/6">
-                <div class="lg:ml-auto lg:text-right">
-                    <div class="relative z-10 inline-block pt-11 lg:pt-0">
-                        <img src="images/bg.PNG" alt="hero section img" class="hidden md:block max-w-[420px] lg:ml-auto">
-                    </div>
-                </div>
+          <div class="w-full px-4 lg:w-1/6">
+            <div class="lg:ml-auto lg:text-right">
+              <div class="relative z-10 inline-block pt-1 lg:pt-0">
+                <img
+                  src="images/bg.PNG"
+                  alt="hero section img"
+                  class="hidden md:block lg:h-[450px] max-w-[600px] lg:ml-[90px]"
+                />
+              </div>
             </div>
-            
+          </div>
         </div>
-    </div>
-</section>
-<!-- ====== END hero ====== -->
+      </div>
+    </section>
+    <!-- ====== END hero ====== -->
 
-<!-- ====== features ====== -->
+    <!-- ====== features ====== -->
 
-
-<section class="pb-16" id="offer">
-    <div class="mx-auto max-w-7xl px-8 md:px-6 justify-center text-center">
+    <section class="pb-16" id="offer">
+      <div class="mx-auto max-w-7xl px-8 md:px-6 justify-center text-center">
         <!-- heading text -->
         <div class="mb-5 sm:mb-10">
-            <span class="font-medium text-blue-500">What we offer</span>
-            <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">What we do</h1>
+          <span class="font-medium text-blue-500">What we offer</span>
+          <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">
+            What we do
+          </h1>
         </div>
         <!-- features img -->
         <div class="md:flex md:justify-center md:gap-6 xl:gap-10">
-            <div class="md:w-7/12">
-                
-
-                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-                        <img class="mb-3 w-16" src="images/features/skill1.png" alt="probate">
-                        <h3 class="text-lg font-bold text-slate-600">Probate</h3>
-                        <p class="text-sm text-blue-500">Legal process of resolving disputes over validity of a will or the adminstration of an estate.</p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-                        <img class="mb-3 w-16" src="images/features/skill2.png" alt="">
-                        <h3 class="text-lg font-bold text-slate-600">Civil Matters</h3>
-                        <p class="text-sm text-blue-500">Wide range of services across various area of law. </p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-                        <img class="mb-3 w-16" src="images/features/skill4.png" alt="">
-                        <h3 class="text-lg font-bold text-slate-600">Taxes</h3>
-                        <p class="text-sm text-blue-500">Regulations governing the asssesment and payment of taxes inposed by the governments.</p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-                        <img class="mb-3 w-16" src="images/features/skill5.png" alt="">
-                        <h3 class="text-lg font-bold text-slate-600">Corporate Law</h3>
-                        <p class="text-sm text-blue-500">Legal aspects of business operations, including formation, governance and compliance with regulations.</p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-                        <img class="mb-3 w-16" src="images/features/skill3.png" alt="">
-                        <h3 class="text-lg font-bold text-slate-600">Real Estate</h3>
-                        <p class="text-sm text-blue-500">Legal aspects of property transactions, ownership rights and management of properties.</p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-                        <img class="mb-3 w-16" src="images/features/skill6.png" alt="">
-                        <h3 class="text-lg font-bold text-slate-600">Employment</h3>
-                        <p class="text-sm text-blue-500">Rules and regulations guiding employment law.</p>
-                    </div>
-                </div>
+          <div class="md:w-7/12">
+            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill1.png"
+                  alt="probate"
+                />
+                <h3 class="text-lg font-bold text-slate-600">Probate</h3>
+                <p class="text-sm text-blue-500">
+                  Legal process of resolving disputes over validity of a will or
+                  the adminstration of an estate.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill2.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">Civil Matters</h3>
+                <p class="text-sm text-blue-500">
+                  Wide range of services across various area of law.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill2.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">
+                  Matrimonial Proceedings
+                </h3>
+                <p class="text-sm text-blue-500">
+                  Rules and Regulations guiding Matrimonial laws.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill3.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">
+                  Properties Consultant
+                </h3>
+                <p class="text-sm text-blue-500">
+                  Guidance on buying and selling of properties using the Rule of
+                  Law.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill4.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">Taxes</h3>
+                <p class="text-sm text-blue-500">
+                  Regulations governing the asssesment and payment of taxes
+                  inposed by the governments.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill5.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">Corporate Law</h3>
+                <p class="text-sm text-blue-500">
+                  Legal aspects of business operations, including formation,
+                  governance and compliance with regulations.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill3.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">Real Estate</h3>
+                <p class="text-sm text-blue-500">
+                  Legal aspects of property transactions, ownership rights and
+                  management of properties.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill6.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-bold text-slate-600">Employment</h3>
+                <p class="text-sm text-blue-500">
+                  Rules and regulations guiding employment law.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+              >
+                <img
+                  class="mb-3 w-16"
+                  src="images/features/skill1.png"
+                  alt="probate"
+                />
+                <h3 class="text-lg font-bold text-slate-600">Family Matters</h3>
+                <p class="text-sm text-blue-500">
+                  Legal process of resolving disputes of family matters.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ====== END features ====== -->
+    <!-- ====== END features ====== -->
 
+    <!-- ====== about ====== -->
 
-<!-- ====== about ====== -->
-
-<section class="py-16" id="about">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <section class="py-16" id="about">
+      <div class="mx-auto max-w-7xl px-8 md:px-6">
         <div class="md:flex md:justify-between md:gap-6">
-            <div class="md:w-6/12">
-                 <!-- heading text -->
-                <div class="mb-5 sm:mb-10">
-                    <span class="font-medium text-blue-500">About Us</span>
-                    <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Creative Law Firm</h1>
+          <div class="md:w-6/12">
+            <!-- heading text -->
+            <div class="mb-5 sm:mb-10">
+              <span class="font-medium text-blue-500">About Us</span>
+              <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">
+                Creative Law Firm
+              </h1>
+            </div>
+            <p class="text-slate-500 mb-6">
+              Delivering outstanding creative services, solutions to our clients
+              with passion, dynamism and guaranteed legal representation.
+            </p>
+            <ul>
+              <li class="mb-6 flex items-center">
+                <div
+                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                >
+                  <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="text-slate-500 mb-6">Delivering outstanding creative services, solutions to our clients with passion, dynamism and guaranteed legal representation. </p>
-                <ul>
-                    <li class="mb-6 flex items-center">
-                        <div class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white">
-                            <ion-icon name="briefcase-outline"></ion-icon>
-                        </div>
-                        <p class="ml-4 max-w-md font-medium text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </li>
-                    <li class="mb-6 flex items-center">
-                        <div class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white">
-                            <ion-icon name="cube-outline"></ion-icon>
-                        </div>
-                        <p class="ml-4 max-w-md font-medium text-slate-600">Omnis unde nam quia harum voluptatum itaque iste nostrum amet vero.</p>
-                    </li>
-                    <li class="mb-6 flex items-center">
-                        <div class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white">
-                            <ion-icon name="mail-unread-outline"></ion-icon>
-                        </div>
-                        <p class="ml-4 max-w-md font-medium text-slate-600">Id quos et quidem perspiciatis similique! Rerum, natus temporibus.</p>
-                    </li>
-                </ul>
-            </div>
+                <p class="ml-4 max-w-md font-medium text-slate-600">
+                  Trusted Counsel, Proven Results.
+                </p>
+              </li>
+              <li class="mb-6 flex items-center">
+                <div
+                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                >
+                  <ion-icon name="cube-outline"></ion-icon>
+                </div>
+                <p class="ml-4 max-w-md font-medium text-slate-600">
+                  Your Interest, Our Priority.
+                </p>
+              </li>
+              <li class="mb-6 flex items-center">
+                <div
+                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                >
+                  <ion-icon name="cube-outline"></ion-icon>
+                </div>
+                <p class="ml-4 max-w-md font-medium text-slate-600">
+                  Expert Guidance,Personalized Care.
+                </p>
+              </li>
+              <li class="mb-6 flex items-center">
+                <div
+                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                >
+                  <ion-icon name="cube-outline"></ion-icon>
+                </div>
+                <p class="ml-4 max-w-md font-medium text-slate-600">
+                  Your Voice, Protected.
+                </p>
+              </li>
+            </ul>
+          </div>
 
-            <!-- about img -->
-            <div class="mt-8 flex justify-center md:mt-0 md:w-5/12">
-                <img src="images/about.png" alt="about img" class="max-h-[500px] md:max-h-max">
-            </div>
-
+          <!-- about img -->
+          <div class="mt-8 flex justify-center md:mt-0 md:w-5/12">
+            <img
+              src="images/about.png"
+              alt="about img"
+              class="max-h-[500px] md:max-h-max"
+            />
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ====== END about ====== -->
+    <!-- ====== END about ====== -->
 
-
-<!-- ====== team ====== -->
-<section class="py-16" id="team">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <!-- ====== team ====== -->
+    <section class="py-16" id="team">
+      <div class="mx-auto max-w-7xl px-8 md:px-6">
         <!-- heading text -->
         <div class="mb-10 text-center">
-            <span class="text-3xl text-blue-500">Our Team</span>
+          <span class="text-3xl text-blue-500">Our Team</span>
         </div>
 
         <!-- box wrapper -->
         <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:gap-8">
-            <div class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200">
-                <img src="./images/lawyer1.png" alt="">
-                <h4 class="mt-3 mb-1 text-[27px] font-semibold text-blue-900 duration-200">IDOWU OLOWU</h4>
-                <p class="text-center text-2xl duration-200">Principal Partner</p>
-            </div>
+          <div
+            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+          >
+            <img src="./images/lawyer1.png" alt="" />
+            <h4
+              class="mt-3 mb-1 text-[27px] font-semibold text-blue-900 duration-200"
+            >
+              IDOWU OLOWU Esq
+            </h4>
+            <p class="text-center text-2xl duration-200">Principal Partner</p>
+          </div>
 
-            <div class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200">
-                <img src="./images/lawyer2.png" alt="">
-                <h4 class="mt-3 mb-1 text-[27px] font-semibold duration-200 text-blue-900">FADWA FESHITAN</h4>
-                <p class="text-center  text-2xl  duration-200">Associate Partner</p>
-            </div>
+          <div
+            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+          >
+            <img src="./images/lawyer2.png" alt="" />
+            <h4
+              class="mt-3 mb-1 text-[27px] font-semibold duration-200 text-blue-900"
+            >
+              FADWA FESHITAN Esq
+            </h4>
+            <p class="text-center text-2xl duration-200">Associate Partner</p>
+          </div>
 
-                <div class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200">
-                    <img src="./images/lawyer1.png" alt="">
-                    <h4 class="mt-3 mb-1 text-[27px] font-bold text-blue-900 duration-200">IDOWU OLOWU</h4>
-                    <p class="text-center text-2xl  duration-200 group-hover:text-blue-200">Principal Partner</p>
-                </div>
-    
-                <div class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200">
-                    <img src="./images/lawyer2.png" alt="">
-                    <h4 class="mt-3 mb-1 text-[20px] font-bold duration-200 text-blue-900">OBASANJO STEPHEN</h4>
-                    <p class="text-center  text-2xl  duration-200 ">Secretary</p>
-                </div>
+          <div
+            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+          >
+            <img src="./images/lawyer1.png" alt="" />
+            <h4
+              class="mt-3 mb-1 text-[27px] font-bold text-blue-900 duration-200"
+            >
+              IDOWU OLOWU
+            </h4>
+            <p
+              class="text-center text-2xl duration-200 group-hover:text-blue-200"
+            >
+              Principal Partner
+            </p>
+          </div>
+
+          <div
+            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+          >
+            <img src="./images/lawyer2.png" alt="" />
+            <h4
+              class="mt-3 mb-1 text-[20px] font-bold duration-200 text-blue-900"
+            >
+              OBASANJO STEPHEN
+            </h4>
+            <p class="text-center text-2xl duration-200">Secretary</p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ====== END service ====== -->
+    <!-- ====== END service ====== -->
 
+    <!-- ====== Blog ====== -->
 
-<!-- ====== Blog ====== -->
-
-<!-- <section class="py-16"> -->
+    <!-- <section class="py-16"> -->
     <!-- <div class="mx-auto max-w-7xl px-8 md:px-6"> -->
-        <!-- heading text -->
-        <!-- <div class="mb-5 sm:mb-10"> -->
-            <!-- <span class="font-medium text-blue-500">Our Blog</span> -->
-            <!-- <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">From Our Latest Blog</h1> -->
-        <!-- </div> -->
-        <!-- wrapper -->
-        <!-- <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-10"> -->
-            <!-- single-blog -->
-            <!-- <div class="w-full duration-200 hover:scale-95"> -->
-                <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
-                    <!-- <img src="images/blog/blog-1.png" alt="blog img" class="w-full"> -->
-                <!-- </div> -->
-                <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
-                    <!-- <div class=""> -->
-                        <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Services</a> -->
-                        <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit.</a> -->
-                    <!-- </div> -->
-                    <!-- <hr class="my-4 border-slate-100"> -->
-                    <!-- <div class="flex"> -->
-                        <!-- <img src="images/blog/user-1.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
-                        <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-
-            <!-- single-blog -->
-            <!-- <div class="w-full duration-200 hover:scale-95"> -->
-                <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
-                    <!-- <img src="images/blog/blog-2.png" alt="blog img" class="w-full"> -->
-                <!-- </div> -->
-                <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
-                    <!-- <div class=""> -->
-                        <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Services</a> -->
-                        <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Design</a> -->
-                        <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Dolore Placeat Ullam Architecto Deleniti Maxime Laborum</a> -->
-                    <!-- </div> -->
-                    <!-- <hr class="my-4 border-slate-100"> -->
-                    <!-- <div class="flex"> -->
-                        <!-- <img src="images/blog/user-2.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
-                        <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-
-            <!-- single-blog -->
-            <!-- <div class="w-full duration-200 hover:scale-95"> -->
-                <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
-                    <!-- <img src="images/blog/blog-3.png" alt="blog img" class="w-full"> -->
-                <!-- </div> -->
-                <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
-                    <!-- <div class=""> -->
-                        <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Website</a> -->
-                        <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit.</a> -->
-                    <!-- </div> -->
-                    <!-- <hr class="my-4 border-slate-100"> -->
-                    <!-- <div class="flex"> -->
-                        <!-- <img src="images/blog/user-3.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
-                        <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
+    <!-- heading text -->
+    <!-- <div class="mb-5 sm:mb-10"> -->
+    <!-- <span class="font-medium text-blue-500">Our Blog</span> -->
+    <!-- <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">From Our Latest Blog</h1> -->
     <!-- </div> -->
-<!-- </section>  -->
+    <!-- wrapper -->
+    <!-- <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-10"> -->
+    <!-- single-blog -->
+    <!-- <div class="w-full duration-200 hover:scale-95"> -->
+    <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
+    <!-- <img src="images/blog/blog-1.png" alt="blog img" class="w-full"> -->
+    <!-- </div> -->
+    <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
+    <!-- <div class=""> -->
+    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Services</a> -->
+    <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit.</a> -->
+    <!-- </div> -->
+    <!-- <hr class="my-4 border-slate-100"> -->
+    <!-- <div class="flex"> -->
+    <!-- <img src="images/blog/user-1.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
+    <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
 
-<!-- ====== END Blog ====== -->
+    <!-- single-blog -->
+    <!-- <div class="w-full duration-200 hover:scale-95"> -->
+    <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
+    <!-- <img src="images/blog/blog-2.png" alt="blog img" class="w-full"> -->
+    <!-- </div> -->
+    <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
+    <!-- <div class=""> -->
+    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Services</a> -->
+    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Design</a> -->
+    <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Dolore Placeat Ullam Architecto Deleniti Maxime Laborum</a> -->
+    <!-- </div> -->
+    <!-- <hr class="my-4 border-slate-100"> -->
+    <!-- <div class="flex"> -->
+    <!-- <img src="images/blog/user-2.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
+    <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
 
-<!-- ====== Contact ====== -->
+    <!-- single-blog -->
+    <!-- <div class="w-full duration-200 hover:scale-95"> -->
+    <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
+    <!-- <img src="images/blog/blog-3.png" alt="blog img" class="w-full"> -->
+    <!-- </div> -->
+    <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
+    <!-- <div class=""> -->
+    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Website</a> -->
+    <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit.</a> -->
+    <!-- </div> -->
+    <!-- <hr class="my-4 border-slate-100"> -->
+    <!-- <div class="flex"> -->
+    <!-- <img src="images/blog/user-3.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
+    <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </section>  -->
 
+    <!-- ====== END Blog ====== -->
 
-<section class="relative overflow-hidden py-16" id="contact">
-    <img src="images/effect.png" alt="effect" class="absolute bottom-[-400px] -z-10 w-full opacity-[0.2]">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <!-- ====== Contact ====== -->
+
+    <section class="relative overflow-hidden py-16" id="contact">
+      <img
+        src="images/effect.png"
+        alt="effect"
+        class="absolute bottom-[-400px] -z-10 w-full opacity-[0.2]"
+      />
+      <div class="mx-auto max-w-7xl px-8 md:px-6">
         <div class="-mx-4 flex flex-wrap lg:justify-between">
+          <!-- left info-->
+          <div class="w-full px-4 md:w-1/2 xl:w-6/12">
+            <div class="mb-12 max-w-[570px] lg:mb-0">
+              <span class="font-medium text-blue-500">Contact Us</span>
+              <h1 class="mb-3 text-2xl font-bold text-slate-900 sm:text-3xl">
+                GET IN TOUCH WITH US
+              </h1>
 
-            <!-- left info-->
-            <div class="w-full px-4 md:w-1/2 xl:w-6/12">
-                <div class="mb-12 max-w-[570px] lg:mb-0">
-                    <span class="font-medium text-blue-500">Contact Us</span>
-                    <h1 class="mb-3 text-2xl font-bold text-slate-900 sm:text-3xl">GET IN TOUCH WITH US</h1>
-
-                    <!-- address -->
-                    <div class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10">
-                        <div class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]">
-                            <ion-icon name="location-outline" class="text-3xl"></ion-icon>
-                        </div>
-                        <div class="w-full">
-                            <h4 class="mb-1 text-xl font-bold text-slate-700">Our Location</h4>
-                            <p class="text-base text-slate-800
-                            ">366, Borno Way, Spencer Busstop, Sabo, Yaba, Lagos.</p>
-                        </div>
-                    </div>
-                    <!-- phone -->
-                    <div class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10">
-                        <div class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]">
-                            <ion-icon name="call-outline" class="text-3xl"></ion-icon>
-                        </div>
-                        <div class="w-full">
-                            <h4 class="mb-1 text-xl font-bold text-slate-700">Phone Number</h4>
-                            <p class="text-base text-slate-900
-                            ">(+234)8025799716</p>
-                            <p class="text-base text-slate-900
-                            ">(+234)8159583447</p
-                            >
-                        </div>
-                    </div>
-                    <!-- mail -->
-                    <div class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10">
-                        <div class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]">
-                            <ion-icon name="mail-outline" class="text-3xl"></ion-icon>
-                        </div>
-                        <div class="w-full text-md">
-                            <h4 class="mb-1 text-xl font-bold text-slate-900">Email Address</h4>
-                            <p class="text-base text-slate-900
-                            ">idowu_olowu@yahoo.com</p>
-                        </div>
-                    </div>
-
-
+              <!-- address -->
+              <div
+                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10"
+              >
+                <div
+                  class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]"
+                >
+                  <ion-icon name="location-outline" class="text-3xl"></ion-icon>
                 </div>
-            </div>
-
-            <!-- right contact-->
-            <div class="w-full px-4 md:w-1/2 xl:w-5/12">
-                <div class="relative rounded-lg bg-blue-900 p-8 shadow-lg shadow-blue-500/10 sm:p-12">
-                    <form action="">
-                        <div class="mb-6">
-                            <input type="text" placeholder="Your Name" class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none">
-                        </div>
-                        <div class="mb-6">
-                            <input type="email" placeholder="Your Email" class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none">
-                        </div>
-                        <div class="mb-6">
-                            <textarea name="message" rows="6" class="resize-none w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"></textarea>
-                        </div>
-                        <div class="">
-                            <button type="submit" class="w-full rounded border border-blue-300 bg-black p-3 hover:bg-blue-600 text-white transition-all hover:bg-opacity-90">Send Message</button>
-                        </div>
-                    </form>
+                <div class="w-full">
+                  <h4 class="mb-1 text-xl font-bold text-slate-700">
+                    Our Location
+                  </h4>
+                  <p class="text-base text-slate-800">
+                    366, Borno Way, Spencer Bus Stop, Sabo, Yaba, Lagos.
+                  </p>
                 </div>
+              </div>
+              <!-- phone -->
+              <div
+                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10"
+              >
+                <div
+                  class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]"
+                >
+                  <ion-icon name="call-outline" class="text-3xl"></ion-icon>
+                </div>
+                <div class="w-full">
+                  <h4 class="mb-1 text-xl font-bold text-slate-700">
+                    Phone Number
+                  </h4>
+                  <p class="text-base text-slate-900">(+234)8025799716</p>
+                  <p class="text-base text-slate-900">(+234)8159583447</p>
+                </div>
+              </div>
+              <!-- mail -->
+              <div
+                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10"
+              >
+                <div
+                  class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]"
+                >
+                  <ion-icon name="mail-outline" class="text-3xl"></ion-icon>
+                </div>
+                <div class="w-full text-md">
+                  <h4 class="mb-1 text-xl font-bold text-slate-900">
+                    Email Address
+                  </h4>
+                  <p class="text-base text-slate-900">idowu_olowu@yahoo.com</p>
+                </div>
+              </div>
             </div>
+          </div>
 
-
+          <!-- right contact-->
+          <div class="w-full px-4 md:w-1/2 xl:w-5/12">
+            <div
+              class="relative rounded-lg bg-blue-900 p-8 shadow-lg shadow-blue-500/10 sm:p-12"
+            >
+              <form action="">
+                <div class="mb-6">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
+                  />
+                </div>
+                <div class="mb-6">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
+                  />
+                </div>
+                <div class="mb-6">
+                  <textarea
+                    name="message"
+                    rows="6"
+                    class="resize-none w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
+                  ></textarea>
+                </div>
+                <div class="">
+                  <button
+                    type="submit"
+                    class="w-full rounded border border-blue-300 bg-black p-3 hover:bg-blue-600 text-white transition-all hover:bg-opacity-90"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
+    <!-- ====== END Contact ====== -->
 
-<!-- ====== END Contact ====== -->
+    <!-- ====== footer ====== -->
 
-<!-- ====== footer ====== -->
-
-<footer class="bg-slate-50/80 pt-16">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
-
+    <footer class="bg-slate-50/80 pt-16">
+      <div class="mx-auto max-w-7xl px-8 md:px-6">
         <!-- End footer top -->
 
         <!-- footer bottom -->
         <div class="flex flex-col justify-between border-t py-8 sm:flex-row">
-            <p class="text-md sm:text-sm">© Copyright 2025 <a href="#" class=""> IDOWU OLOWU & CO</a> All rights reserved.</p>
-            <div class="mt-4 flex items-center space-x-4 sm:mt-0">
-                <a href="#">
-                    <ion-icon name="logo-facebook" class="text-2xl text-slate-500 hover:text-blue-500 duration-300"></ion-icon>
-                </a>
-                <a href="#">
-                    <ion-icon name="logo-twitter" class="text-2xl text-slate-500 hover:text-blue-500 duration-300"></ion-icon>
-                </a>
-                <a href="#">
-                    <ion-icon name="logo-youtube" class="text-2xl text-slate-500 hover:text-blue-500 duration-300"></ion-icon>
-                </a>
-            </div>
+          <p class="text-md sm:text-sm">
+            © Copyright 2025 <a href="#" class=""> IDOWU OLOWU & CO</a> All
+            rights reserved.
+          </p>
+          <div class="mt-4 flex items-center space-x-4 sm:mt-0">
+            <a href="#">
+              <ion-icon
+                name="logo-facebook"
+                class="text-2xl text-slate-500 hover:text-blue-500 duration-300"
+              ></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon
+                name="logo-twitter"
+                class="text-2xl text-slate-500 hover:text-blue-500 duration-300"
+              ></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon
+                name="logo-youtube"
+                class="text-2xl text-slate-500 hover:text-blue-500 duration-300"
+              ></ion-icon>
+            </a>
+          </div>
         </div>
         <!-- End footer bottom -->
+      </div>
+    </footer>
 
-    </div>
-</footer>
-
-<!-- ====== END footer ====== -->
-
-
-
-</body>
+    <!-- ====== END footer ====== -->
+  </body>
 </html>

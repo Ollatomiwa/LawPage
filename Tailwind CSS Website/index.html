@@ -25,20 +25,66 @@
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <!-- style css -->
-    <style type="text/tailwindcss">
+    <style>
       body {
         font-family: "Inter", sans-serif;
       }
+    
+      @keyframes marquee-sm {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-199%);
+        }
+      }
+    
+      @keyframes marquee-md {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-80%);
+        }
+      }
+    
+      @keyframes marquee-lg {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    
+      .animate-marquee {
+        animation: marquee-sm 15s linear infinite;
+      }
+    
+      @media (min-width: 768px) {
+        .animate-marquee {
+          animation: marquee-md 15s linear infinite;
+        }
+      }
+    
+      @media (min-width: 992px) {
+        .animate-marquee {
+          animation: marquee-lg 10s linear infinite;
+        }
+      }
     </style>
+    
     <script src="script.js" type="text/javascript"></script>
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-     <script type="text/javascript">
-         (function() {
-             // https://dashboard.emailjs.com/admin/account
-             emailjs.init("V1RLVIhigGr5OAANB" );
-         })();
-     </script>
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("V1RLVIhigGr5OAANB");
+      })();
+    </script>
   </head>
   <body>
     <!-- ====== header ====== -->
@@ -310,6 +356,31 @@
       </div>
     </section>
 
+    <div class="relative w-full overflow-hidden bg-black py-8">
+      <div class="animate-marquee whitespace-nowrap flex items-center">
+        <!--duplicare your logos for seamless looping-->
+        <div class="mx-8 inline-flex items-center">
+          <img src="./images/features/skill1.png" alt="" class="h-12 max-w-none" />
+        </div>
+        <div class="mx-8 inline-flex items-center">
+          <img src="./images/features/skill2.png" alt="" class="h-12 max-w-none" />
+        </div>
+        <div class="mx-8 inline-flex items-center">
+          <img src="./images/features/skill3.png" alt="" class="h-12 max-w-none" />
+        </div>
+        <!-- dyplicate the same logos-->
+        <div class="mx-8 inline-flex items-center">
+          <img src="./images/features/skill4.png" alt="" class="h-12 max-w-none" />
+        </div>
+        <div class="mx-8 inline-flex items-center">
+          <img src="./images/features/skill6.png" alt="" class="h-12 max-w-none" />
+        </div>
+        <div class="mx-8 inline-flex items-center">
+          <img src="./images/features/skill5.png" alt="" class="h-12 max-w-none" />
+        </div>
+      </div>
+    </div>
+
     <!-- ====== END features ====== -->
 
     <!-- ====== about ====== -->
@@ -420,7 +491,6 @@
             </h4>
             <p class="text-center text-2xl duration-200">Associate Partner</p>
           </div>
-
 
           <div
             class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
@@ -590,7 +660,7 @@
               <form id="contact-form">
                 <div class="mb-6">
                   <input
-                    type="text" 
+                    type="text"
                     id="fullName"
                     placeholder="Full Name"
                     class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
@@ -613,7 +683,8 @@
                   ></textarea>
                 </div>
                 <div class="">
-                  <button onclick="SendMail()"
+                  <button
+                    onclick="SendMail()"
                     class="w-full rounded border border-blue-300 bg-black p-3 hover:bg-blue-600 text-white transition-all hover:bg-opacity-90"
                   >
                     Send Message

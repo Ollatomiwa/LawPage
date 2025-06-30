@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Idowu-Olowu</title>
+    <title>Idowu-Olowu & Co - Premier Law Firm</title>
     <!-- favicon link -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- google font link -->
@@ -28,6 +28,74 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+      
+      .gradient-text {
+        background: linear-gradient(90deg, #1a365d 0%, #2c5282 50%, #4299e1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      }
+      
+      .feature-card {
+        background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+        transition: all 0.3s ease;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(66, 153, 225, 0.15);
+      }
+      
+      .team-card {
+        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        transition: all 0.3s ease;
+      }
+      
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1);
+      }
+      
+      .contact-gradient {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      }
+      
+      .btn-primary {
+        background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+      }
+      
+      .btn-secondary {
+        background: linear-gradient(90deg, #1a365d 0%, #2c5282 100%);
+        transition: all 0.3s ease;
+      }
+      
+      .btn-secondary:hover {
+        background: linear-gradient(90deg, #2c5282 0%, #1a365d 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(26, 54, 93, 0.3);
+      }
+      
+      .header-glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      
+      .marquee-bg {
+        background: linear-gradient(90deg, #1a365d 0%, #2c5282 100%);
       }
     
       @keyframes marquee-sm {
@@ -91,15 +159,15 @@
 
     <header
       x-data="{navbarOpen: false}"
-      class="absolute sticky left-0 top-0 z-50 bg-white/90 w-full backdrop-blur"
+      class="fixed left-0 top-0 z-50 w-full header-glass shadow-sm"
     >
       <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
         <div
-          class="relative flex h-full items-center justify-between border-b border-slate-500/10"
+          class="relative flex h-full items-center justify-between border-b border-slate-200"
         >
           <!-- logo -->
-          <div class="w-[30rem] max-w-full text-blue-600 font-bold">
-            <a href="#"> IDOWUOLOWU & CO </a>
+          <div class="w-[30rem] max-w-full">
+            <a href="#" class="text-2xl font-bold gradient-text">IDOWU-OLOWU & CO</a>
           </div>
 
           <!-- menu -->
@@ -108,41 +176,41 @@
               x-transition
               :class="!navbarOpen && 'hidden'"
               id="navbarCollapse"
-              class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-blue-200 bg-black py-5 px-6 shadow-lg shadow-blue-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg:py-0"
+              class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-blue-100 bg-white py-5 px-6 shadow-xl lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:px-0 lg:py-0"
             >
               <ul class="flex flex-col justify-center gap-8 lg:flex-row">
                 <li>
                   <a
                     href="#home"
-                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
                     href="#offer"
-                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
                     >What we do</a
                   >
                 </li>
                 <li>
                   <a
                     href="#about"
-                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
                     >About</a
                   >
                 </li>
                 <li>
                   <a
                     href="#team"
-                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
                     >Team</a
                   >
                 </li>
                 <li>
                   <a
                     href="#contact"
-                    class="text-lg font-medium text-blue-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
                     >Contact</a
                   >
                 </li>
@@ -159,7 +227,7 @@
             >
               <ion-icon
                 name="menu-outline"
-                class="text-4xl text-blue-500"
+                class="text-4xl text-blue-600"
               ></ion-icon>
             </button>
           </div>
@@ -170,25 +238,32 @@
 
     <!-- ====== hero ====== -->
 
-    <section class="relative bg-white py-16 lg:pt-30px]" id="home">
+    <section class="relative hero-gradient pt-32 pb-16 lg:pt-40" id="home">
       <div class="mx-auto max-w-7xl px-8 md:px-6">
-        <div class="flex flex-wrap">
-          <div class="w-full lg:w-5/12 lg:mt-[50px] lg:ml-[70px]">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full lg:w-5/12 lg:ml-[70px]">
             <h1
-              class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[30px] lg:text-[40px] xl:text-[42px]"
+              class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[42px] lg:text-[48px] xl:text-[52px]"
             >
               PROTEGE LAW FIRM
-              <span class="text-blue-600">IDOWU OLOWU & CO</span>
+              <span class="gradient-text">IDOWU OLOWU & CO</span>
             </h1>
-            <p class="text-slate-900 mb-8 max-w-[480px] text-base">
+            <p class="text-slate-600 mb-8 max-w-[480px] text-lg leading-relaxed">
               Trust us to protect your rights, navigate complex legal
               challenges, and deliver results. Your success is our priority.
             </p>
-            <a
-              href="#offer"
-              class="btn w-full rounded-md bg-blue-700 px-8 py-2.5 font-semibold text-white shadow-md shadow-blue-500/20 hover:bg-blue-600 duration-200 sm:w-auto"
-              >Practice Area</a
-            >
+            <div class="flex gap-4">
+              <a
+                href="#offer"
+                class="btn-primary rounded-lg px-8 py-3.5 font-semibold text-white shadow-lg sm:w-auto"
+                >Practice Areas</a
+              >
+              <a
+                href="#contact"
+                class="btn-secondary rounded-lg px-8 py-3.5 font-semibold text-white shadow-lg sm:w-auto"
+                >Contact Us</a
+              >
+            </div>
           </div>
 
           <div class="hidden px-4 lg:block lg:w-1/12"></div>
@@ -199,7 +274,7 @@
                 <img
                   src="images/bg.PNG"
                   alt="hero section img"
-                  class="hidden md:block lg:h-[450px] max-w-[600px] lg:ml-[90px]"
+                  class="hidden md:block lg:h-[500px] max-w-[600px] lg:ml-[90px] rounded-lg shadow-xl"
                 />
               </div>
             </div>
@@ -211,142 +286,161 @@
 
     <!-- ====== features ====== -->
 
-    <section class="pb-16" id="offer">
+    <section class="py-16" id="offer">
       <div class="mx-auto max-w-7xl px-8 md:px-6 justify-center text-center">
         <!-- heading text -->
-        <div class="mb-5 sm:mb-10">
-          <span class="font-medium text-blue-500">What we offer</span>
-          <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">
-            What we do
+        <div class="mb-10 sm:mb-16">
+          <span class="text-lg font-medium text-blue-600">What we offer</span>
+          <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl">
+            Our Practice Areas
           </h1>
+          <div class="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
         </div>
         <!-- features img -->
         <div class="md:flex md:justify-center md:gap-6 xl:gap-10">
-          <div class="md:w-7/12">
-            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="md:w-10/12">
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill1.png"
-                  alt="probate"
-                />
-                <h3 class="text-lg font-bold text-slate-600">Probate</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill1.png"
+                    alt="probate"
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Probate</h3>
+                <p class="text-center text-slate-600">
                   Legal process of resolving disputes over validity of a will or
                   the adminstration of an estate.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill2.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">Civil Matters</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill2.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Civil Matters</h3>
+                <p class="text-center text-slate-600">
                   Wide range of services across various area of law.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill2.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill2.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">
                   Matrimonial Proceedings
                 </h3>
-                <p class="text-sm text-blue-500">
+                <p class="text-center text-slate-600">
                   Rules and Regulations guiding Matrimonial laws.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill3.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill3.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">
                   Properties Consultant
                 </h3>
-                <p class="text-sm text-blue-500">
+                <p class="text-center text-slate-600">
                   Guidance on buying and selling of properties using the Rule of
                   Law.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill4.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">Taxes</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill4.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Taxes</h3>
+                <p class="text-center text-slate-600">
                   Regulations governing the asssesment and payment of taxes
                   inposed by the governments.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill5.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">Corporate Law</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill5.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Corporate Law</h3>
+                <p class="text-center text-slate-600">
                   Legal aspects of business operations, including formation,
                   governance and compliance with regulations.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill3.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">Real Estate</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill3.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Real Estate</h3>
+                <p class="text-center text-slate-600">
                   Legal aspects of property transactions, ownership rights and
                   management of properties.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill6.png"
-                  alt=""
-                />
-                <h3 class="text-lg font-bold text-slate-600">Employment</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill6.png"
+                    alt=""
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Employment</h3>
+                <p class="text-center text-slate-600">
                   Rules and regulations guiding employment law.
                 </p>
               </div>
               <div
-                class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg"
+                class="feature-card flex flex-col items-center justify-center rounded-xl px-6 py-10 shadow-lg"
               >
-                <img
-                  class="mb-3 w-16"
-                  src="images/features/skill1.png"
-                  alt="probate"
-                />
-                <h3 class="text-lg font-bold text-slate-600">Family Matters</h3>
-                <p class="text-sm text-blue-500">
+                <div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
+                  <img
+                    class="w-12"
+                    src="images/features/skill1.png"
+                    alt="probate"
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-700 mb-3">Family Matters</h3>
+                <p class="text-center text-slate-600">
                   Legal process of resolving disputes of family matters.
                 </p>
               </div>
@@ -356,7 +450,7 @@
       </div>
     </section>
 
-    <div class="relative w-full overflow-hidden bg-black py-8">
+    <div class="relative w-full overflow-hidden marquee-bg py-8">
       <div class="animate-marquee whitespace-nowrap flex items-center">
         <!--duplicare your logos for seamless looping-->
         <div class="mx-8 inline-flex items-center">
@@ -390,54 +484,55 @@
         <div class="md:flex md:justify-between md:gap-6">
           <div class="md:w-6/12">
             <!-- heading text -->
-            <div class="mb-5 sm:mb-10">
-              <span class="font-medium text-blue-500">About Us</span>
-              <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">
+            <div class="mb-8 sm:mb-12">
+              <span class="text-lg font-medium text-blue-600">About Us</span>
+              <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl">
                 Creative Law Firm
               </h1>
+              <div class="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
             </div>
-            <p class="text-slate-500 mb-6">
+            <p class="text-slate-600 mb-6 text-lg leading-relaxed">
               Delivering outstanding creative services, solutions to our clients
               with passion, dynamism and guaranteed legal representation.
             </p>
-            <ul>
-              <li class="mb-6 flex items-center">
+            <ul class="space-y-4">
+              <li class="flex items-start">
                 <div
-                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                  class="flex h-[40px] w-[40px] min-w-[40px] items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white"
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md font-medium text-slate-600">
+                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
                   Trusted Counsel, Proven Results.
                 </p>
               </li>
-              <li class="mb-6 flex items-center">
+              <li class="flex items-start">
                 <div
-                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                  class="flex h-[40px] w-[40px] min-w-[40px] items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white"
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md font-medium text-slate-600">
+                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
                   Your Interest, Our Priority.
                 </p>
               </li>
-              <li class="mb-6 flex items-center">
+              <li class="flex items-start">
                 <div
-                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                  class="flex h-[40px] w-[40px] min-w-[40px] items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white"
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md font-medium text-slate-600">
-                  Expert Guidance,Personalized Care.
+                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
+                  Expert Guidance, Personalized Care.
                 </p>
               </li>
-              <li class="mb-6 flex items-center">
+              <li class="flex items-start">
                 <div
-                  class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-blue-500 text-white"
+                  class="flex h-[40px] w-[40px] min-w-[40px] items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white"
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md font-medium text-slate-600">
+                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
                   Your Voice, Protected.
                 </p>
               </li>
@@ -449,7 +544,7 @@
             <img
               src="images/about.png"
               alt="about img"
-              class="max-h-[500px] md:max-h-max"
+              class="max-h-[500px] rounded-lg shadow-xl md:max-h-max"
             />
           </div>
         </div>
@@ -462,46 +557,72 @@
     <section class="py-16" id="team">
       <div class="mx-auto max-w-7xl px-8 md:px-6">
         <!-- heading text -->
-        <div class="mb-10 text-center">
-          <span class="text-3xl text-blue-500">Our Team</span>
+        <div class="mb-12 text-center">
+          <span class="text-lg font-medium text-blue-600">Our Team</span>
+          <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl">Meet Our Legal Experts</h1>
+          <div class="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
         </div>
 
         <!-- box wrapper -->
-        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:gap-8">
+        <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:gap-10">
           <div
-            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+            class="team-card group flex cursor-pointer flex-col items-center rounded-xl px-5 py-8 shadow-lg duration-200"
           >
-            <img src="./images/lawyer1.png" alt="" />
+            <img src="./images/lawyer1.png" alt="" class="h-48 w-48 rounded-full object-cover shadow-md" />
             <h4
-              class="mt-3 mb-1 text-[27px] font-semibold text-blue-900 duration-200"
+              class="mt-6 mb-2 text-2xl font-bold text-slate-800 duration-200 group-hover:text-blue-600"
             >
               IDOWU OLOWU Esq
             </h4>
-            <p class="text-center text-2xl duration-200">Principal Partner</p>
+            <p class="text-lg font-medium text-blue-600 duration-200">Principal Partner</p>
+            <div class="mt-4 flex space-x-4">
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
+              </a>
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <ion-icon name="mail-outline" class="text-xl"></ion-icon>
+              </a>
+            </div>
           </div>
 
           <div
-            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+            class="team-card group flex cursor-pointer flex-col items-center rounded-xl px-5 py-8 shadow-lg duration-200"
           >
-            <img src="./images/lawyer2.png" alt="" />
+            <img src="./images/lawyer2.png" alt="" class="h-48 w-48 rounded-full object-cover shadow-md" />
             <h4
-              class="mt-3 mb-1 text-[27px] font-semibold duration-200 text-blue-900"
+              class="mt-6 mb-2 text-2xl font-bold text-slate-800 duration-200 group-hover:text-blue-600"
             >
               FADWA FESHITAN Esq
             </h4>
-            <p class="text-center text-2xl duration-200">Associate Partner</p>
+            <p class="text-lg font-medium text-blue-600 duration-200">Associate Partner</p>
+            <div class="mt-4 flex space-x-4">
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
+              </a>
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <ion-icon name="mail-outline" class="text-xl"></ion-icon>
+              </a>
+            </div>
           </div>
 
           <div
-            class="group flex cursor-pointer flex-col items-center rounded-xl border border-blue-500/10 bg-white px-5 py-8 shadow-lg shadow-blue-300/10 duration-200"
+            class="team-card group flex cursor-pointer flex-col items-center rounded-xl px-5 py-8 shadow-lg duration-200"
           >
-            <img src="./images/lawyer2.png" alt="" />
+            <img src="./images/lawyer2.png" alt="" class="h-48 w-48 rounded-full object-cover shadow-md" />
             <h4
-              class="mt-3 mb-1 text-[20px] font-bold duration-200 text-blue-900"
+              class="mt-6 mb-2 text-2xl font-bold text-slate-800 duration-200 group-hover:text-blue-600"
             >
               OBASANJO STEPHEN
             </h4>
-            <p class="text-center text-2xl duration-200">Secretary</p>
+            <p class="text-lg font-medium text-blue-600 duration-200">Secretary</p>
+            <div class="mt-4 flex space-x-4">
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
+              </a>
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <ion-icon name="mail-outline" class="text-xl"></ion-icon>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -509,144 +630,69 @@
 
     <!-- ====== END service ====== -->
 
-    <!-- ====== Blog ====== -->
-
-    <!-- <section class="py-16"> -->
-    <!-- <div class="mx-auto max-w-7xl px-8 md:px-6"> -->
-    <!-- heading text -->
-    <!-- <div class="mb-5 sm:mb-10"> -->
-    <!-- <span class="font-medium text-blue-500">Our Blog</span> -->
-    <!-- <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">From Our Latest Blog</h1> -->
-    <!-- </div> -->
-    <!-- wrapper -->
-    <!-- <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-10"> -->
-    <!-- single-blog -->
-    <!-- <div class="w-full duration-200 hover:scale-95"> -->
-    <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
-    <!-- <img src="images/blog/blog-1.png" alt="blog img" class="w-full"> -->
-    <!-- </div> -->
-    <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
-    <!-- <div class=""> -->
-    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Services</a> -->
-    <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit.</a> -->
-    <!-- </div> -->
-    <!-- <hr class="my-4 border-slate-100"> -->
-    <!-- <div class="flex"> -->
-    <!-- <img src="images/blog/user-1.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
-    <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- single-blog -->
-    <!-- <div class="w-full duration-200 hover:scale-95"> -->
-    <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
-    <!-- <img src="images/blog/blog-2.png" alt="blog img" class="w-full"> -->
-    <!-- </div> -->
-    <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
-    <!-- <div class=""> -->
-    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Services</a> -->
-    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Design</a> -->
-    <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Dolore Placeat Ullam Architecto Deleniti Maxime Laborum</a> -->
-    <!-- </div> -->
-    <!-- <hr class="my-4 border-slate-100"> -->
-    <!-- <div class="flex"> -->
-    <!-- <img src="images/blog/user-2.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
-    <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- single-blog -->
-    <!-- <div class="w-full duration-200 hover:scale-95"> -->
-    <!-- <div class="max-h-52 w-full overflow-hidden rounded-t-xl"> -->
-    <!-- <img src="images/blog/blog-3.png" alt="blog img" class="w-full"> -->
-    <!-- </div> -->
-    <!-- <div class="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10"> -->
-    <!-- <div class=""> -->
-    <!-- <a href="#" class="mr-2 rounded-md bg-blue-50 px-3 py-1 text-sm text-slate-600">Website</a> -->
-    <!-- <a href="#" class="block pt-4 font-medium capitalize text-slate-800 hover:text-blue-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit.</a> -->
-    <!-- </div> -->
-    <!-- <hr class="my-4 border-slate-100"> -->
-    <!-- <div class="flex"> -->
-    <!-- <img src="images/blog/user-3.png" alt="user img" class="mr-3 h-10 w-10 rounded-full object-cover"> -->
-    <!-- <p class="text-sm font-semibold capitalize text-slate-600">Zahidul Hossain <span class="block text-xs text-slate-400">web designer</span></p> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </section>  -->
-
-    <!-- ====== END Blog ====== -->
-
     <!-- ====== Contact ====== -->
 
     <section class="relative overflow-hidden py-16" id="contact">
-      <img
-        src="images/effect.png"
-        alt="effect"
-        class="absolute bottom-[-400px] -z-10 w-full opacity-[0.2]"
-      />
       <div class="mx-auto max-w-7xl px-8 md:px-6">
         <div class="-mx-4 flex flex-wrap lg:justify-between">
           <!-- left info-->
           <div class="w-full px-4 md:w-1/2 xl:w-6/12">
             <div class="mb-12 max-w-[570px] lg:mb-0">
-              <span class="font-medium text-blue-500">Contact Us</span>
-              <h1 class="mb-3 text-2xl font-bold text-slate-900 sm:text-3xl">
+              <span class="text-lg font-medium text-blue-600">Contact Us</span>
+              <h1 class="mb-4 text-3xl font-bold text-slate-800 sm:text-4xl">
                 GET IN TOUCH WITH US
               </h1>
+              <div class="mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
 
               <!-- address -->
               <div
-                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10"
+                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-6 shadow-lg"
               >
                 <div
-                  class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]"
+                  class="mr-6 flex h-[70px] w-[70px] items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-600"
                 >
                   <ion-icon name="location-outline" class="text-3xl"></ion-icon>
                 </div>
                 <div class="w-full">
-                  <h4 class="mb-1 text-xl font-bold text-slate-700">
+                  <h4 class="mb-2 text-xl font-bold text-slate-700">
                     Our Location
                   </h4>
-                  <p class="text-base text-slate-800">
+                  <p class="text-base text-slate-600">
                     366, Borno Way, Spencer Bus Stop, Sabo, Yaba, Lagos.
                   </p>
                 </div>
               </div>
               <!-- phone -->
               <div
-                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10"
+                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-6 shadow-lg"
               >
                 <div
-                  class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]"
+                  class="mr-6 flex h-[70px] w-[70px] items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-600"
                 >
                   <ion-icon name="call-outline" class="text-3xl"></ion-icon>
                 </div>
                 <div class="w-full">
-                  <h4 class="mb-1 text-xl font-bold text-slate-700">
+                  <h4 class="mb-2 text-xl font-bold text-slate-700">
                     Phone Number
                   </h4>
-                  <p class="text-base text-slate-900">(+234)8025799716</p>
-                  <p class="text-base text-slate-900">(+234)8159583447</p>
+                  <p class="text-base text-slate-600">(+234)8025799716</p>
+                  <p class="text-base text-slate-600">(+234)8159583447</p>
                 </div>
               </div>
               <!-- mail -->
               <div
-                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-4 shadow-md shadow-blue-500/10"
+                class="mb-8 flex w-full max-w-[420px] items-center rounded-lg bg-white p-6 shadow-lg"
               >
                 <div
-                  class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-blue-500 bg-opacity-5 text-blue-500 sm:h-[70px] sm:max-w-[70px]"
+                  class="mr-6 flex h-[70px] w-[70px] items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-600"
                 >
                   <ion-icon name="mail-outline" class="text-3xl"></ion-icon>
                 </div>
-                <div class="w-full text-md">
-                  <h4 class="mb-1 text-xl font-bold text-slate-900">
+                <div class="w-full">
+                  <h4 class="mb-2 text-xl font-bold text-slate-700">
                     Email Address
                   </h4>
-                  <p class="text-base text-slate-900">idowu_olowu@yahoo.com</p>
+                  <p class="text-base text-slate-600">idowu_olowu@yahoo.com</p>
                 </div>
               </div>
             </div>
@@ -655,23 +701,24 @@
           <!-- right contact-->
           <div class="w-full px-4 md:w-1/2 xl:w-5/12">
             <div
-              class="relative rounded-lg bg-blue-900 p-8 shadow-lg shadow-blue-500/10 sm:p-12"
+              class="relative rounded-xl contact-gradient p-8 shadow-xl sm:p-12"
             >
+              <h2 class="mb-6 text-2xl font-bold text-white">Send Us a Message</h2>
               <form id="contact-form">
                 <div class="mb-6">
                   <input
                     type="text"
                     id="fullName"
                     placeholder="Full Name"
-                    class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
+                    class="w-full rounded-lg border border-blue-300/30 bg-blue-900/50 px-4 py-3 text-white placeholder-blue-200 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
                   />
                 </div>
                 <div class="mb-6">
                   <input
                     type="email"
                     id="email_id"
-                    placeholder="Email Id "
-                    class="w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
+                    placeholder="Email Address"
+                    class="w-full rounded-lg border border-blue-300/30 bg-blue-900/50 px-4 py-3 text-white placeholder-blue-200 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
                   />
                 </div>
                 <div class="mb-6">
@@ -679,13 +726,14 @@
                     name="message"
                     id="message"
                     rows="6"
-                    class="resize-none w-full rounded-lg border border-blue-500/20 px-4 py-3 text-slate-700 focus:border-blue-900 focus:outline-none"
+                    placeholder="Your Message"
+                    class="resize-none w-full rounded-lg border border-blue-300/30 bg-blue-900/50 px-4 py-3 text-white placeholder-blue-200 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
                   ></textarea>
                 </div>
                 <div class="">
                   <button
                     onclick="SendMail()"
-                    class="w-full rounded border border-blue-300 bg-black p-3 hover:bg-blue-600 text-white transition-all hover:bg-opacity-90"
+                    class="btn-primary w-full rounded-lg p-4 font-semibold text-white transition-all"
                   >
                     Send Message
                   </button>
@@ -701,35 +749,63 @@
 
     <!-- ====== footer ====== -->
 
-    <footer class="bg-slate-50/80 pt-16">
+    <footer class="bg-slate-100 pt-16">
       <div class="mx-auto max-w-7xl px-8 md:px-6">
-        <!-- End footer top -->
+        <!-- footer columns -->
+        <div class="grid grid-cols-1 gap-12 pb-12 md:grid-cols-3 lg:grid-cols-4">
+          <div class="md:col-span-2">
+            <a href="#" class="mb-4 inline-block text-2xl font-bold gradient-text">IDOWU-OLOWU & CO</a>
+            <p class="mb-6 text-slate-600">
+              Trusted legal counsel delivering exceptional results through expertise, dedication, and personalized service for all your legal needs.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-slate-500 hover:text-blue-600">
+                <ion-icon name="logo-facebook" class="text-2xl"></ion-icon>
+              </a>
+              <a href="#" class="text-slate-500 hover:text-blue-600">
+                <ion-icon name="logo-twitter" class="text-2xl"></ion-icon>
+              </a>
+              <a href="#" class="text-slate-500 hover:text-blue-600">
+                <ion-icon name="logo-linkedin" class="text-2xl"></ion-icon>
+              </a>
+              <a href="#" class="text-slate-500 hover:text-blue-600">
+                <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="mb-6 text-lg font-bold text-slate-800">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-slate-600 hover:text-blue-600">Home</a></li>
+              <li><a href="#offer" class="text-slate-600 hover:text-blue-600">Services</a></li>
+              <li><a href="#about" class="text-slate-600 hover:text-blue-600">About Us</a></li>
+              <li><a href="#team" class="text-slate-600 hover:text-blue-600">Our Team</a></li>
+              <li><a href="#contact" class="text-slate-600 hover:text-blue-600">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="mb-6 text-lg font-bold text-slate-800">Practice Areas</h3>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-slate-600 hover:text-blue-600">Probate</a></li>
+              <li><a href="#" class="text-slate-600 hover:text-blue-600">Civil Matters</a></li>
+              <li><a href="#" class="text-slate-600 hover:text-blue-600">Corporate Law</a></li>
+              <li><a href="#" class="text-slate-600 hover:text-blue-600">Real Estate</a></li>
+              <li><a href="#" class="text-slate-600 hover:text-blue-600">Family Law</a></li>
+            </ul>
+          </div>
+        </div>
 
         <!-- footer bottom -->
-        <div class="flex flex-col justify-between border-t py-8 sm:flex-row">
-          <p class="text-md sm:text-sm">
-            © Copyright 2025 <a href="#" class=""> IDOWU OLOWU & CO</a> All
+        <div class="flex flex-col justify-between border-t border-slate-200 py-8 sm:flex-row">
+          <p class="text-slate-600">
+            © Copyright 2025 <a href="#" class="font-medium text-blue-600">IDOWU OLOWU & CO</a> All
             rights reserved.
           </p>
-          <div class="mt-4 flex items-center space-x-4 sm:mt-0">
-            <a href="#">
-              <ion-icon
-                name="logo-facebook"
-                class="text-2xl text-slate-500 hover:text-blue-500 duration-300"
-              ></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon
-                name="logo-twitter"
-                class="text-2xl text-slate-500 hover:text-blue-500 duration-300"
-              ></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon
-                name="logo-youtube"
-                class="text-2xl text-slate-500 hover:text-blue-500 duration-300"
-              ></ion-icon>
-            </a>
+          <div class="mt-4 flex items-center space-x-6 sm:mt-0">
+            <a href="#" class="text-slate-600 hover:text-blue-600">Privacy Policy</a>
+            <a href="#" class="text-slate-600 hover:text-blue-600">Terms of Service</a>
           </div>
         </div>
         <!-- End footer bottom -->

@@ -89,7 +89,7 @@
       }
       
       .header-glass {
-        
+        background: white;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
       }
@@ -159,7 +159,7 @@
 
     <header
       x-data="{navbarOpen: false}"
-      class=" left-0 top-0 z-50 w-full header-glass shadow-sm"
+      class=" fixed left-0 top-0 z-50 header-glass w-full header-glass shadow-sm" 
     >
       <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
         <div
@@ -167,7 +167,7 @@
         >
           <!-- logo -->
           <div class="w-[30rem] max-w-full">
-            <a href="./images/logo.PNG" class="lg:text-3xl font-bold gradient-text md:text-[25px] sm:text-[10px]">IDOWU-OLOWU & CO</a>
+            <img src="/Tailwind CSS Website/images/logo.PNG" class="bg-[#FFD700] g:text-3xl font-bold gradient-text md:text-[25px] sm:text-[8px]">
           </div>
 
           <!-- menu -->
@@ -176,41 +176,41 @@
               x-transition
               :class="!navbarOpen && 'hidden'"
               id="navbarCollapse"
-              class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg bg-[#03194b] border border-blue-100  py-5 px-6 shadow-xl lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:px-0 lg:py-0"
+              class=" absolute right-0 top-[90px] bg-white w-full max-w-[350px] rounded-lg  border border-blue-100  py-5 px-6 shadow-xl lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:px-0 lg:py-0"
             >
               <ul class="flex flex-col justify-center gap-8 lg:flex-row">
                 <li>
                   <a
                     href="#home"
-                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
+                    class="text-lg font-medium  duration-200 hover:text-black text-[#03194b]"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
                     href="#offer"
-                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
+                    class="text-lg font-medium  duration-200 hover:text-black text-[#03194b]"
                     >What we do</a
                   >
                 </li>
                 <li>
                   <a
                     href="#about"
-                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
+                    class="text-lg font-medium  duration-200 hover:text-black text-[#03194b]"
                     >About</a
                   >
                 </li>
                 <li>
                   <a
                     href="#team"
-                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
+                    class="text-lg font-medium duration-200 hover:text-black text-[#03194b]"
                     >Team</a
                   >
                 </li>
                 <li>
                   <a
                     href="#contact"
-                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
+                    class="text-lg font-medium  duration-200 hover:text-black text-[#03194b]"
                     >Contact</a
                   >
                 </li>
@@ -227,7 +227,7 @@
             >
               <ion-icon
                 name="menu-outline"
-                class="text-4xl text-blue-600"
+                class="text-4xl text-blue bg-white"
               ></ion-icon>
             </button>
           </div>

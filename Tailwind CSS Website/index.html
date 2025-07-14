@@ -28,18 +28,18 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background-color: #f8fafc;
+        background-color: #03194b;
       }
       
       .gradient-text {
-        background: linear-gradient(90deg, #1a365d 0%, #2c5282 50%, #4299e1 100%);
+        background: #FFD700;
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
       }
       
       .hero-gradient {
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        
       }
       
       .feature-card {
@@ -89,13 +89,13 @@
       }
       
       .header-glass {
-        background: rgba(255, 255, 255, 0.85);
+        
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
       }
       
       .marquee-bg {
-        background: linear-gradient(90deg, #1a365d 0%, #2c5282 100%);
+        background: white;
       }
     
       @keyframes marquee-sm {
@@ -159,7 +159,7 @@
 
     <header
       x-data="{navbarOpen: false}"
-      class="fixed left-0 top-0 z-50 w-full header-glass shadow-sm"
+      class=" left-0 top-0 z-50 w-full header-glass shadow-sm"
     >
       <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
         <div
@@ -167,7 +167,7 @@
         >
           <!-- logo -->
           <div class="w-[30rem] max-w-full">
-            <a href="#" class="text-2xl font-bold gradient-text">IDOWU-OLOWU & CO</a>
+            <a href="#" class="lg:text-3xl font-bold gradient-text md:text-[25px] sm:text-[10px]">IDOWU-OLOWU & CO</a>
           </div>
 
           <!-- menu -->
@@ -176,41 +176,41 @@
               x-transition
               :class="!navbarOpen && 'hidden'"
               id="navbarCollapse"
-              class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-blue-100 bg-white py-5 px-6 shadow-xl lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:px-0 lg:py-0"
+              class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg bg-[#03194b] border border-blue-100  py-5 px-6 shadow-xl lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:px-0 lg:py-0"
             >
               <ul class="flex flex-col justify-center gap-8 lg:flex-row">
                 <li>
                   <a
                     href="#home"
-                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
                     href="#offer"
-                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
                     >What we do</a
                   >
                 </li>
                 <li>
                   <a
                     href="#about"
-                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
                     >About</a
                   >
                 </li>
                 <li>
                   <a
                     href="#team"
-                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
                     >Team</a
                   >
                 </li>
                 <li>
                   <a
                     href="#contact"
-                    class="text-lg font-medium text-slate-700 duration-200 hover:text-blue-600 lg:text-base"
+                    class="text-lg font-medium text-white duration-200 hover:text-white lg:text-[#FFD700]"
                     >Contact</a
                   >
                 </li>
@@ -243,12 +243,12 @@
         <div class="flex flex-wrap items-center">
           <div class="w-full lg:w-5/12 lg:ml-[70px]">
             <h1
-              class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[42px] lg:text-[48px] xl:text-[52px]"
+              class="text-white mb-3 text-4xl font-bold leading-snug sm:text-[42px] lg:text-[48px] xl:text-[52px]"
             >
               PROTEGE LAW FIRM
               <span class="gradient-text">IDOWU OLOWU & CO</span>
             </h1>
-            <p class="text-slate-600 mb-8 max-w-[480px] text-lg leading-relaxed">
+            <p class="text-white mb-8 max-w-[480px] text-lg leading-relaxed">
               Trust us to protect your rights, navigate complex legal
               challenges, and deliver results. Your success is our priority.
             </p>
@@ -290,8 +290,8 @@
       <div class="mx-auto max-w-7xl px-8 md:px-6 justify-center text-center">
         <!-- heading text -->
         <div class="mb-10 sm:mb-16">
-          <span class="text-lg font-medium text-blue-600">What we offer</span>
-          <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl">
+          <span class="text-lg font-medium text-white">What we offer</span>
+          <h1 class="text-3xl font-bold text-white sm:text-4xl">
             Our Practice Areas
           </h1>
           <div class="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
@@ -485,13 +485,13 @@
           <div class="md:w-6/12">
             <!-- heading text -->
             <div class="mb-8 sm:mb-12">
-              <span class="text-lg font-medium text-blue-600">About Us</span>
-              <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl">
+              <span class="text-lg font-medium text-white">About Us</span>
+              <h1 class="text-3xl font-bold text-[#FFD700] sm:text-4xl">
                 Creative Law Firm
               </h1>
               <div class="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
             </div>
-            <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+            <p class="text-white mb-6 text-lg leading-relaxed">
               Delivering outstanding creative services, solutions to our clients
               with passion, dynamism and guaranteed legal representation.
             </p>
@@ -502,7 +502,7 @@
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
+                <p class="ml-4 max-w-md text-lg font-medium text-white">
                   Trusted Counsel, Proven Results.
                 </p>
               </li>
@@ -512,7 +512,7 @@
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
+                <p class="ml-4 max-w-md text-lg font-medium text-white">
                   Your Interest, Our Priority.
                 </p>
               </li>
@@ -522,7 +522,7 @@
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
+                <p class="ml-4 max-w-md text-lg font-medium text-white">
                   Expert Guidance, Personalized Care.
                 </p>
               </li>
@@ -532,7 +532,7 @@
                 >
                   <ion-icon name="cube-outline"></ion-icon>
                 </div>
-                <p class="ml-4 max-w-md text-lg font-medium text-slate-700">
+                <p class="ml-4 max-w-md text-lg font-medium text-white">
                   Your Voice, Protected.
                 </p>
               </li>
@@ -558,8 +558,8 @@
       <div class="mx-auto max-w-7xl px-8 md:px-6">
         <!-- heading text -->
         <div class="mb-12 text-center">
-          <span class="text-lg font-medium text-blue-600">Our Team</span>
-          <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl">Meet Our Legal Experts</h1>
+          <span class="text-lg font-medium text-white">Our Team</span>
+          <h1 class="text-3xl font-bold text-[#FFD700] sm:text-4xl">Meet Our Legal Experts</h1>
           <div class="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
         </div>
 
@@ -638,8 +638,8 @@
           <!-- left info-->
           <div class="w-full px-4 md:w-1/2 xl:w-6/12">
             <div class="mb-12 max-w-[570px] lg:mb-0">
-              <span class="text-lg font-medium text-blue-600">Contact Us</span>
-              <h1 class="mb-4 text-3xl font-bold text-slate-800 sm:text-4xl">
+              <span class="text-lg font-medium text-white">Contact Us</span>
+              <h1 class="mb-4 text-3xl font-bold text-[#FFD700] sm:text-4xl">
                 GET IN TOUCH WITH US
               </h1>
               <div class="mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-800"></div>
@@ -704,7 +704,7 @@
               class="relative rounded-xl contact-gradient p-8 shadow-xl sm:p-12"
             >
               <h2 class="mb-6 text-2xl font-bold text-white">Send Us a Message</h2>
-              <form id="contact-form">
+              <form id="contact-form text-white">
                 <div class="mb-6">
                   <input
                     type="text"
@@ -788,11 +788,11 @@
           <div>
             <h3 class="mb-6 text-lg font-bold text-slate-800">Practice Areas</h3>
             <ul class="space-y-3">
-              <li><a href="#" class="text-slate-600 hover:text-blue-600">Probate</a></li>
-              <li><a href="#" class="text-slate-600 hover:text-blue-600">Civil Matters</a></li>
-              <li><a href="#" class="text-slate-600 hover:text-blue-600">Corporate Law</a></li>
-              <li><a href="#" class="text-slate-600 hover:text-blue-600">Real Estate</a></li>
-              <li><a href="#" class="text-slate-600 hover:text-blue-600">Family Law</a></li>
+              <li><a href="#offer" class="text-slate-600 hover:text-blue-600">Probate</a></li>
+              <li><a href="#offer" class="text-slate-600 hover:text-blue-600">Civil Matters</a></li>
+              <li><a href="#offer" class="text-slate-600 hover:text-blue-600">Corporate Law</a></li>
+              <li><a href="#offer" class="text-slate-600 hover:text-blue-600">Real Estate</a></li>
+              <li><a href="#offer" class="text-slate-600 hover:text-blue-600">Family Law</a></li>
             </ul>
           </div>
         </div>

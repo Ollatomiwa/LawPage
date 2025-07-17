@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Consultancy | Idowu-Olowu & Co</title>
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ionicons cdn -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        .property-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .market-trend::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #1d4ed8;
+            border-radius: 4px 0 0 4px;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Hero Section -->
+    <div class="property-hero text-white py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Premium Property Consultancy</h1>
+            <p class="text-xl opacity-90 mb-8">
+                Strategic real estate solutions tailored to Nigeria's dynamic property market
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                    Consult Our Experts
+                </button>
+                <button class="bg-white text-blue-800 hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors">
+                    Market Reports
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Property Services</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Comprehensive solutions for residential, commercial, and industrial real estate needs
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card bg-white rounded-xl p-8 shadow-lg transition-all duration-300">
+                <div class="text-blue-600 mb-4">
+                    <ion-icon name="business-outline" class="text-4xl"></ion-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Commercial Property Advisory</h3>
+                <p class="text-gray-600 mb-4">
+                    Expert guidance on office spaces, retail developments, and mixed-use properties with ROI analysis.
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Market feasibility studies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Tenant mix optimization</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Lease negotiations</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card bg-white rounded-xl p-8 shadow-lg transition-all duration-300">
+                <div class="text-blue-600 mb-4">
+                    <ion-icon name="home-outline" class="text-4xl"></ion-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Residential Portfolio Management</h3>
+                <p class="text-gray-600 mb-4">
+                    End-to-end management of high-value residential assets across major Nigerian cities.
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Property valuation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Tenant screening</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Maintenance coordination</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card bg-white rounded-xl p-8 shadow-lg transition-all duration-300">
+                <div class="text-blue-600 mb-4">
+                    <ion-icon name="construct-outline" class="text-4xl"></ion-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Development Consultancy</h3>
+                <p class="text-gray-600 mb-4">
+                    From land acquisition to project delivery, we ensure optimal development outcomes.
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Site selection analysis</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Regulatory compliance</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Construction monitoring</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Trends Section -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Nigeria Property Market Insights</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="market-trend bg-white p-8 rounded-lg relative pl-12 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Lagos Market Overview</h3>
+                    <p class="text-gray-600 mb-4">
+                        Prime areas like Ikoyi and Victoria Island maintain 8-10% annual yield despite economic fluctuations, 
+                        with growing demand for serviced apartments.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <ion-icon name="time-outline" class="mr-1"></ion-icon>
+                        <span>Updated Q2 2023</span>
+                    </div>
+                </div>
+                
+                <div class="market-trend bg-white p-8 rounded-lg relative pl-12 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Emerging Opportunities</h3>
+                    <p class="text-gray-600 mb-4">
+                        Abuja's Maitama district sees 15% price appreciation, while Port Harcourt's industrial 
+                        properties offer stable 7-9% returns with lower vacancy rates.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <ion-icon name="time-outline" class="mr-1"></ion-icon>
+                        <span>Updated Q2 2023</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-8">
+                <h3 class="text-xl font-semibold mb-4 text-blue-800">Key Market Indicators</h3>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2">7.5%</div>
+                        <div class="text-gray-600">Avg. Residential Yield</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2">12%</div>
+                        <div class="text-gray-600">Prime Office Vacancy</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2">$120/sqm</div>
+                        <div class="text-gray-600">Prime Retail Rents</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2">+5.8%</div>
+                        <div class="text-gray-600">Y-o-Y Price Growth</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Studies Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Notable Property Transactions</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Case 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl">
+                <div class="h-48 bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                         alt="Commercial building" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-600 font-medium mb-2">Lagos • 2022</div>
+                    <h3 class="text-xl font-semibold mb-3">Ikoyi Office Tower Acquisition</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advised international investor on $28m acquisition of Grade A office property with 95% occupancy.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Due Diligence
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Valuation
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl">
+                <div class="h-48 bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                         alt="Luxury home" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-600 font-medium mb-2">Abuja • 2021</div>
+                    <h3 class="text-xl font-semibold mb-3">Maitama Luxury Portfolio</h3>
+                    <p class="text-gray-600 mb-4">
+                        Structured sale of 8 high-end residential properties achieving 22% premium to market valuation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Portfolio Strategy
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Tax Optimization
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl">
+                <div class="h-48 bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                         alt="Mixed-use development" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-600 font-medium mb-2">Lekki • 2023</div>
+                    <h3 class="text-xl font-semibold mb-3">Lekki Phase 1 Mixed-Use</h3>
+                    <p class="text-gray-600 mb-4">
+                        Secured planning approvals and anchor tenants for 15,000sqm retail/residential development.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Zoning Approvals
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Tenant Mix
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-800 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Make Strategic Property Decisions?</h2>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                Our consultants combine local expertise with global standards to deliver exceptional real estate outcomes.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-white text-blue-800 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors flex items-center">
+                    <ion-icon name="call-outline" class="mr-2"></ion-icon>
+                    Schedule Consultation
+                </button>
+                <button class="border-2 border-white text-white hover:bg-blue-700 font-semibold px-8 py-4 rounded-lg transition-colors flex items-center">
+                    <ion-icon name="document-text-outline" class="mr-2"></ion-icon>
+                    Download Market Report
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation for service cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            serviceCards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

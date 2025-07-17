@@ -3,9 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Corporate Law | Idowu-Olowu & Co</title>
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ionicons cdn -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        .corporate-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .case-study::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #1d4ed8;
+            border-radius: 4px 0 0 4px;
+        }
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
 </head>
-<body>
-    
+<body class="font-inter bg-gray-50">
+    <!-- Hero Section -->
+    <div class="corporate-hero text-white py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Corporate Law Expertise</h1>
+            <p class="text-xl opacity-90 mb-8">
+                Strategic legal solutions for businesses operating in Nigeria's complex regulatory environment
+            </p>
+            <button class="bg-white text-blue-800 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                Consult Our Corporate Team
+            </button>
+        </div>
+    </div>
+
+    <!-- Practice Areas -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Corporate Practice Areas</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Comprehensive legal support for all stages of business growth and development
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Practice 1 -->
+            <div class="practice-card bg-white rounded-xl p-8 shadow-md transition-all duration-300">
+                <div class="text-blue-600 mb-4">
+                    <ion-icon name="business-outline" class="text-4xl"></ion-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Company Formation & Compliance</h3>
+                <p class="text-gray-600 mb-4">
+                    End-to-end incorporation services and ongoing regulatory compliance for businesses of all sizes.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Business registration (CAC)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Corporate governance structuring</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Annual returns filing</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Practice 2 -->
+            <div class="practice-card bg-white rounded-xl p-8 shadow-md transition-all duration-300">
+                <div class="text-blue-600 mb-4">
+                    <ion-icon name="swap-horizontal-outline" class="text-4xl"></ion-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Mergers & Acquisitions</h3>
+                <p class="text-gray-600 mb-4">
+                    Strategic guidance through complex transactions, from due diligence to post-merger integration.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Transaction structuring</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Regulatory approvals</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Share purchase agreements</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Practice 3 -->
+            <div class="practice-card bg-white rounded-xl p-8 shadow-md transition-all duration-300">
+                <div class="text-blue-600 mb-4">
+                    <ion-icon name="document-text-outline" class="text-4xl"></ion-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Commercial Contracts</h3>
+                <p class="text-gray-600 mb-4">
+                    Drafting and negotiating agreements that protect your interests while enabling business growth.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Joint venture agreements</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Distribution agreements</span>
+                    </li>
+                    <li class="flex items-start">
+                        <ion-icon name="checkmark-circle" class="text-blue-500 mr-2 mt-1"></ion-icon>
+                        <span>Service level agreements</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-6 text-center">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">150+</div>
+                    <div class="text-gray-600">Companies Incorporated</div>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">₦85B</div>
+                    <div class="text-gray-600">M&A Deal Value</div>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">40+</div>
+                    <div class="text-gray-600">Industry Sectors</div>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <div class="text-gray-600">Client Retention</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Studies -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Notable Corporate Transactions</h2>
+        
+        <div class="space-y-8">
+            <!-- Case 1 -->
+            <div class="case-study bg-white rounded-lg shadow-md relative pl-8">
+                <div class="p-8">
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <span class="text-blue-600 font-medium">2023 • Cross-Border Acquisition</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Confidential</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Fintech Sector Acquisition</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advised international payment platform on acquisition of Nigerian fintech startup, navigating complex CBN regulations 
+                        and securing all required approvals within record 8-week timeframe.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Regulatory Compliance
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Due Diligence
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Transaction Structuring
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case 2 -->
+            <div class="case-study bg-white rounded-lg shadow-md relative pl-8">
+                <div class="p-8">
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <span class="text-blue-600 font-medium">2022 • Corporate Restructuring</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Public</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Conglomerate Holding Structure</h3>
+                    <p class="text-gray-600 mb-4">
+                        Designed and implemented new holding company structure for diversified Nigerian conglomerate with 12 subsidiaries, 
+                        optimizing tax efficiency and creating clearer governance framework for investors.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Tax Optimization
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Corporate Governance
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            SEC Compliance
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case 3 -->
+            <div class="case-study bg-white rounded-lg shadow-md relative pl-8">
+                <div class="p-8">
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <span class="text-blue-600 font-medium">2021 • Joint Venture</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Confidential</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Energy Sector Partnership</h3>
+                    <p class="text-gray-600 mb-4">
+                        Negotiated and drafted joint venture agreement between local energy company and European technical partner, 
+                        balancing intellectual property protections with local content requirements under Nigerian law.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Contract Drafting
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            Local Content Compliance
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                            IP Protection
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Testimonial -->
+    <div class="bg-blue-50 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <ion-icon name="chatbubble-ellipses" class="text-blue-600 text-4xl mb-4"></ion-icon>
+            <blockquote class="text-xl italic text-gray-700 mb-6">
+                "Idowu-Olowu's corporate team provided exceptional guidance through our Series B funding round. 
+                Their deep understanding of Nigerian corporate law and investor expectations was invaluable in 
+                structuring the deal to satisfy all parties."
+            </blockquote>
+            <div class="font-semibold text-gray-800">- Chinedu Okeke, CEO TechSolutions Ltd</div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-800 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Strengthen Your Corporate Legal Position</h2>
+            <p class="text-xl opacity-90 mb-8">
+                Our team combines technical legal expertise with practical business acumen to deliver solutions that work.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-white text-blue-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors flex items-center">
+                    <ion-icon name="calendar-outline" class="mr-2"></ion-icon>
+                    Schedule Consultation
+                </button>
+                <button class="border-2 border-white text-white hover:bg-blue-700 font-semibold px-8 py-3 rounded-lg transition-colors flex items-center">
+                    <ion-icon name="download-outline" class="mr-2"></ion-icon>
+                    Download Corporate Guide
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation for practice cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const practiceCards = document.querySelectorAll('.practice-card');
+            const statCards = document.querySelectorAll('.stat-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            practiceCards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            statCards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'scale(0.95)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>

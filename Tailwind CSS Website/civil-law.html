@@ -3,11 +3,684 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Civil Law Matters in Nigeria | Idowu-Olowu & Co</title>
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ionicons cdn -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- alpine js cdn -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+        }
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+        .section-divider {
+            height: 80px;
+            width: 100%;
+            background: linear-gradient(to bottom right, transparent 49%, #f3f4f6 50%), linear-gradient(to top right, #f3f4f6 49%, transparent 50%);
+        }
+    </style>
 </head>
-<body>
-    <h1>
-        CIVIL LAW
-    </h1>
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <!-- <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-900">Idowu-Olowu & Co</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-blue-900 font-medium">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-900">Practice Areas</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-900">Our Team</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-900">Cases</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-900">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <ion-icon name="menu-outline" class="text-2xl text-blue-900"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Civil Law Matters in Nigeria</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">
+                Expert legal representation in civil disputes, contract law, property matters, and more.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Consult Our Lawyers
+                </a>
+                <a href="#cases" class="border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition duration-300">
+                    View Notable Cases
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Understanding Civil Law in Nigeria</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Civil law in Nigeria encompasses disputes between individuals or organizations where compensation may be awarded to the victim. Unlike criminal cases, civil matters are typically resolved through monetary compensation or specific performance rather than punishment.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="stat-card bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-4xl font-bold text-blue-900 mb-2">75%</h3>
+                        <p class="text-gray-600">of commercial disputes in Nigeria are resolved through civil litigation</p>
+                    </div>
+                    <div class="stat-card bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-4xl font-bold text-blue-900 mb-2">12-24</h3>
+                        <p class="text-gray-600">Average months for resolution of civil cases in Nigerian courts</p>
+                    </div>
+                    <div class="stat-card bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-4xl font-bold text-blue-900 mb-2">90%</h3>
+                        <p class="text-gray-600">Success rate in civil cases handled by our firm in the last 5 years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Key Areas Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Key Areas of Civil Law Practice</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contract Law -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <ion-icon name="document-text-outline" class="text-4xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Contract Law</h3>
+                    <p class="text-gray-700 mb-4">
+                        Disputes arising from breach of contract, interpretation of contractual terms, and enforcement of agreements.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Employment contracts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Commercial agreements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Service level agreements</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Property Law -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <ion-icon name="home-outline" class="text-4xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Property Law</h3>
+                    <p class="text-gray-700 mb-4">
+                        Land disputes, tenancy issues, property ownership conflicts, and real estate transactions.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Landlord-tenant disputes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Boundary disputes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Ejectment cases</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tort Law -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <ion-icon name="shield-checkmark-outline" class="text-4xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tort Law</h3>
+                    <p class="text-gray-700 mb-4">
+                        Civil wrongs that cause harm or loss, resulting in legal liability for the person who commits the tortious act.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Negligence claims</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Defamation cases</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Nuisance claims</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Family Law -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <ion-icon name="people-outline" class="text-4xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Family Law</h3>
+                    <p class="text-gray-700 mb-4">
+                        Matters relating to family relationships such as marriage, divorce, child custody, and inheritance.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Divorce proceedings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Child custody battles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Inheritance disputes</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Commercial Law -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <ion-icon name="business-outline" class="text-4xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Commercial Law</h3>
+                    <p class="text-gray-700 mb-4">
+                        Legal aspects of business and commercial transactions, including corporate disputes and shareholder issues.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Partnership disputes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Shareholder agreements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Business acquisitions</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Debt Recovery -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <ion-icon name="cash-outline" class="text-4xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Debt Recovery</h3>
+                    <p class="text-gray-700 mb-4">
+                        Legal processes for recovering money owed by individuals or businesses through court action or negotiation.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Loan recovery</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Unpaid invoices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span>Judgment enforcement</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Cases Section -->
+    <section id="cases" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Notable Civil Cases in Nigeria</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Case 1 -->
+                <div class="case-card bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-blue-900 transition duration-300">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <ion-icon name="bookmark-outline" class="text-blue-900 text-xl"></ion-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Shell Petroleum Development Co. v. Chief Isaiah</h3>
+                            <p class="text-gray-500 text-sm">SUIT NO: SC/224/2001 (Supreme Court of Nigeria)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        A landmark case on environmental pollution and compensation where the Supreme Court upheld the right of communities to sue multinational corporations for environmental degradation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Environmental Law</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Compensation</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Community Rights</span>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="case-card bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-blue-900 transition duration-300">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <ion-icon name="bookmark-outline" class="text-blue-900 text-xl"></ion-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">UBA v. BTL Industries Ltd</h3>
+                            <p class="text-gray-500 text-sm">SUIT NO: CA/L/437/2013 (Court of Appeal)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        A significant commercial case clarifying the principles of contract interpretation in loan agreements and the obligations of financial institutions to their customers.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Contract Law</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Banking</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Loan Agreements</span>
+                    </div>
+                </div>
+                
+                <!-- Case 3 -->
+                <div class="case-card bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-blue-900 transition duration-300">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <ion-icon name="bookmark-outline" class="text-blue-900 text-xl"></ion-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Okafor v. Nweke</h3>
+                            <p class="text-gray-500 text-sm">SUIT NO: SC/58/2007 (Supreme Court)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        A pivotal land law case that redefined the requirements for proving title to land in Nigeria, emphasizing the importance of proper documentation and possession.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Land Law</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Property Rights</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Title Disputes</span>
+                    </div>
+                </div>
+                
+                <!-- Case 4 -->
+                <div class="case-card bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-blue-900 transition duration-300">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <ion-icon name="bookmark-outline" class="text-blue-900 text-xl"></ion-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">MTN Nigeria v. Corporate Communications Commission</h3>
+                            <p class="text-gray-500 text-sm">SUIT NO: FHC/L/CS/1603/2015 (Federal High Court)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        A high-profile regulatory dispute concerning the powers of regulatory agencies and the rights of telecommunications companies, setting precedents for administrative law in Nigeria.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Regulatory Law</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Telecommunications</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Administrative Law</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Firm's Cases -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-blue-900 mb-8">Select Cases Handled by Our Firm</h3>
+                
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Firm Case 1 -->
+                    <div class="case-card bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-700 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Adeleke v. Ogun State Government</h3>
+                                <p class="text-gray-600">(2022) - Land Acquisition Dispute</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="bg-blue-700 text-white px-4 py-1 rounded-full text-sm">Won</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Successfully represented a community in a dispute against the Ogun State Government over compulsory land acquisition, securing substantial compensation for our clients.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <ion-icon name="time-outline" class="mr-1"></ion-icon>
+                            <span>Duration: 18 months</span>
+                            <span class="mx-2">•</span>
+                            <ion-icon name="cash-outline" class="mr-1"></ion-icon>
+                            <span>Award: ₦450 million</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Firm Case 2 -->
+                    <div class="case-card bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-700 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">First Merchant Bank v. XYZ Industries Ltd</h3>
+                                <p class="text-gray-600">(2021) - Debt Recovery</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="bg-blue-700 text-white px-4 py-1 rounded-full text-sm">Settled</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Represented a major Nigerian bank in recovering a ₦2.3 billion debt through strategic litigation and negotiation, achieving full repayment with interest.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <ion-icon name="time-outline" class="mr-1"></ion-icon>
+                            <span>Duration: 9 months</span>
+                            <span class="mx-2">•</span>
+                            <ion-icon name="cash-outline" class="mr-1"></ion-icon>
+                            <span>Recovered: ₦2.3 billion + interest</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Firm Case 3 -->
+                    <div class="case-card bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-700 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Johnson Family Estate Dispute</h3>
+                                <p class="text-gray-600">(2020) - Inheritance & Probate</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="bg-blue-700 text-white px-4 py-1 rounded-full text-sm">Won</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Resolved a complex multi-generational family dispute over a multi-billion naira estate through mediation and subsequent court approval, preserving family relationships while ensuring fair distribution.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <ion-icon name="time-outline" class="mr-1"></ion-icon>
+                            <span>Duration: 14 months</span>
+                            <span class="mx-2">•</span>
+                            <ion-icon name="people-outline" class="mr-1"></ion-icon>
+                            <span>12 beneficiaries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Civil Procedure Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Civil Procedure in Nigerian Courts</h2>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">Stages of Civil Litigation in Nigeria</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Stage 1 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">1</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Pre-Action Protocol</h4>
+                                <p class="text-gray-700">
+                                    Before filing a suit, parties are encouraged to exchange correspondence to attempt settlement. Some jurisdictions require pre-action notices for certain claims against government entities.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 2 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">2</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Filing of Originating Processes</h4>
+                                <p class="text-gray-700">
+                                    The plaintiff files a writ of summons or originating motion with a statement of claim, paying the requisite filing fees. The court then issues the processes for service on the defendant.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 3 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">3</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Service of Processes</h4>
+                                <p class="text-gray-700">
+                                    Court processes must be served on the defendant within the time prescribed by law. Service can be personal, substituted, or by publication depending on circumstances.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 4 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">4</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Defense & Counterclaims</h4>
+                                <p class="text-gray-700">
+                                    The defendant enters appearance and files a statement of defense within the stipulated time (usually 14-42 days). They may also file a counterclaim if they have claims against the plaintiff.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 5 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">5</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Pre-Trial Conference</h4>
+                                <p class="text-gray-700">
+                                    Parties meet with the judge to identify issues, explore settlement, and agree on documents to be tendered. This helps streamline the trial process.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 6 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">6</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Trial</h4>
+                                <p class="text-gray-700">
+                                    Parties present their cases through witnesses and documents. The plaintiff bears the burden of proof (balance of probabilities in civil cases).
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 7 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">7</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Judgment</h4>
+                                <p class="text-gray-700">
+                                    The court delivers judgment after considering all evidence. The judgment may include damages, specific performance, injunctions, or declaratory relief.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stage 8 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4 mt-1">8</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Enforcement</h4>
+                                <p class="text-gray-700">
+                                    The successful party may need to take steps to enforce the judgment through garnishee proceedings, writ of execution, or other enforcement mechanisms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">Alternative Dispute Resolution (ADR) in Civil Matters</h3>
+                    <p class="text-gray-700 mb-4">
+                        Nigerian courts now encourage parties to explore ADR mechanisms like mediation, arbitration, and conciliation before or during litigation. Many civil cases are resolved through these faster and less adversarial methods.
+                    </p>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span><strong>Mediation:</strong> A neutral mediator facilitates negotiation between parties to reach a mutually acceptable settlement.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span><strong>Arbitration:</strong> Parties present their case to an arbitrator whose decision is binding, often used in commercial disputes.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-500 mt-1 mr-2"></ion-icon>
+                            <span><strong>Conciliation:</strong> Similar to mediation but the conciliator may propose terms of settlement.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Need Assistance With a Civil Matter?</h2>
+                <p class="text-xl mb-8">
+                    Our team of experienced civil litigation attorneys is ready to help you navigate your legal challenges.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <ion-icon name="location-outline" class="text-xl mr-3 mt-1"></ion-icon>
+                                <div>
+                                    <p class="font-medium">Head Office</p>
+                                    <p>366 Borno Way, Spencer Bus Stop,<br>Sabo, Yaba, Lagos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <ion-icon name="call-outline" class="text-xl mr-3 mt-1"></ion-icon>
+                                <div>
+                                    <p class="font-medium">Phone</p>
+                                    <p>+234 802 579 9716<br>+234 815 958 3447</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <ion-icon name="mail-outline" class="text-xl mr-3 mt-1"></ion-icon>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p>idowu_olowu@yahoo.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-1">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded text-gray-900">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded text-gray-900">
+                            </div>
+                            <div>
+                                <label for="phone" class="block mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 rounded text-gray-900">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-1">Your Legal Issue</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-2 rounded text-gray-900"></textarea>
+                            </div>
+                            <button type="submit" class="bg-white text-blue-900 font-bold px-6 py-3 rounded hover:bg-gray-100 transition duration-300 w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Idowu-Olowu & Co</h3>
+                    <p class="mb-4">
+                        Premier law firm specializing in civil litigation, corporate law, and dispute resolution with a track record of excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <ion-icon name="logo-facebook" class="text-xl"></ion-icon>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <ion-icon name="logo-twitter" class="text-xl"></ion-icon>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Practice Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./probate-law.html" class="hover:text-white">Probate </a></li>
+                        <li><a href="./civil-law.html" class="hover:text-white">Civil Law</a></li>
+                        <li><a href="./matrimonial-law.html" class="hover:text-white">Matrimonial Proceedings</a></li>
+                        <li><a href="./properties-law.html" class="hover:text-white">Properties Consultant</a></li>
+                        <li><a href="./corporate-law.html" class="hover:text-white">Corporate Law </a></li>
+                        <li><a href="./estate-law.html" class="hover:text-white">Real Estate </a></li>
+                        <li><a href="./employment-law.html" class="hover:text-white">Employment </a></li>
+                        <li><a href="./family-law.html" class="hover:text-white">Family Matters </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="hover:text-white">Home</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">
+                        Subscribe to our newsletter for legal insights and updates.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l text-gray-900 w-full">
+                        <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded-r">
+                            <ion-icon name="send-outline"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>&copy; 2025 Idowu-Olowu & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

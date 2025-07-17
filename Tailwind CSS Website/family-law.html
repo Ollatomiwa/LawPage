@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Family Law Matters | Idowu-Olowu & Co</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        .family-hero {
+            background: linear-gradient(135deg, #7e22ce 0%, #c084fc 100%);
+        }
+    </style>
 </head>
-<body>
-    
+<body class="font-inter bg-gray-50">
+    <!-- Hero Section -->
+    <header class="family-hero text-white py-16 px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Family Law in Nigeria</h1>
+        <p class="text-lg opacity-90 max-w-xl mx-auto">
+            Protecting rights in divorce, child custody, and inheritance disputes.
+        </p>
+    </header>
+
+    <!-- Key Areas -->
+    <section class="py-12 px-4 max-w-4xl mx-auto">
+        <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-purple-600">
+                <h3 class="font-semibold text-lg mb-2 flex items-center">
+                    <ion-icon name="heart-dislike-outline" class="mr-2 text-purple-600"></ion-icon> Divorce
+                </h3>
+                <p class="text-gray-600 text-sm">
+                    Grounds include adultery, desertion, and irreconcilable differences under the Matrimonial Causes Act.
+                </p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-purple-600">
+                <h3 class="font-semibold text-lg mb-2 flex items-center">
+                    <ion-icon name="people-outline" class="mr-2 text-purple-600"></ion-icon> Child Custody
+                </h3>
+                <p class="text-gray-600 text-sm">
+                    Courts prioritize child welfare, with recent trends favoring joint custody arrangements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Case Example -->
+    <section class="py-8 px-4 bg-purple-50">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <span class="inline-block px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs font-medium mb-2">2023 Case</span>
+                <h3 class="text-xl font-semibold mb-2">Eze v. Eze (Lagos High Court)</h3>
+                <p class="text-gray-600 mb-3">
+                    Landmark ruling awarded 60% of marital assets to wife after proving husband's economic abuse.
+                </p>
+                <a href="#" class="text-purple-600 text-sm font-medium flex items-center">
+                    Read details <ion-icon name="chevron-forward" class="ml-1"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 px-4 text-center">
+        <button class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-md transition flex items-center mx-auto">
+            <ion-icon name="calendar-outline" class="mr-2"></ion-icon> Schedule Consultation
+        </button>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6 px-4 text-center text-sm">
+        <p>&copy; 2025 Idowu-Olowu & Co. Family Law Specialists.</p>
+    </footer>
 </body>
 </html>
